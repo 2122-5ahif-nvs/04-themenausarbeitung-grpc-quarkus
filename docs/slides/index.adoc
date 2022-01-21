@@ -1,5 +1,5 @@
 = gRPC
-ifndef::imagesdir[:imagesdir: ../images]
+ifndef::imagesdir[:imagesdir: ./images]
 ifndef::backend[:backend: html5]
 :icons: font
 :revealjs_parallaxBackgroundImage: ../images/background2.png
@@ -16,7 +16,7 @@ ifndef::backend[:backend: html5]
 
 * REST
 * SignalR
-* Json-RPC
+* JSON-RPC
 
 == Vorteile
 * Hohe Performance (Kleinere Messages als in REST)
