@@ -1,0 +1,29 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "at.htl.dog";
+option java_outer_classname = "DogGrpcProto";
+
+package dog;
+
+service DogGrpc {
+  rpc dogName(DogRequestWithNameAndAddress) returns (ReplyWithDog) {}
+  rpc getDogs()
+}
+
+message DogRequestWithName {
+  string name = 1;
+}
+message DogRequestWithNameAndAddress {
+  string name = 1;
+  string address = 2;
+}
+
+message ReplyWithDog {
+  string name = 1;
+  string address = 2;
+  string message = 3;
+}
+message DogReply {
+  string message = 1;
+}

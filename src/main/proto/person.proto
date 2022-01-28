@@ -1,0 +1,28 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "at.htl.person";
+option java_outer_classname = "PersonGrpcProto";
+
+package person;
+
+service PersonGrpc {
+  rpc searchPersonByName(PersonRequestWithName) returns (PersonReplyWithPerson) {}
+  rpc addPerson(PersonRequestWithNameAndAddress) returns (PersonRequestWithNameAndAddress) {}
+}
+
+message PersonRequestWithName {
+  string name = 1;
+}
+message PersonRequestWithNameAndAddress {
+  string name = 1;
+  string address = 2;
+}
+
+message PersonReplyWithPerson {
+  string name = 1;
+  string address = 2;
+}
+message PersonReply {
+  string message = 1;
+}
